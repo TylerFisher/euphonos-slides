@@ -1,0 +1,133 @@
+/**
+ * Default theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+$backgroundColor: #556270;
+
+$mainFont: "jubilat", Helvetica, Arial, Verdana, sans-serif;
+$mainFontSize: 40px;
+$mainColor: #C7F464;
+
+$headingFont: "ff-enzo-web", Georgia, serif;
+$headingColor: #C7F464;
+$headingTextShadow: none;
+$heading1TextShadow: none;
+
+$linkColor: #4ECDC4;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal {
+    h1, h2 {
+        font-weight: 900;
+    }
+    .jubilat {
+        font-family: $mainFont;
+        color: $mainColor;
+        text-transform: none;
+    }
+
+    p.faded {
+        strong {
+            font-size: 200%;
+        }
+    }
+    section {
+        img {
+            background: none;
+            border: none;
+            box-shadow: none;
+            margin: 0;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        li {
+            border-bottom: 1px solid $mainColor;
+            padding: 10px 0;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+
+    }
+    dt {
+        font-weight: bold;
+        text-align: left;
+        margin-top: 40px;
+    }
+
+    dd {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    dt:first-child {
+        margin-top: 0;
+    }
+
+    figure.freezeframe-container {
+        background-color: black !important;
+    }
+}
+
+
+.soundcite-loaded {
+    border-radius: 6px;
+    padding: 0 5px 0 5px;
+    display: inline-block;
+    cursor: pointer;
+    background: rgba(0,0,0,.1);
+}
+
+.soundcite-loaded:before {
+    display: inline-block;
+    content: "";
+    vertical-align: -10%;
+}
+
+.soundcite-loading:before {
+    margin-right: 0.5em;
+    font-size: 0.7em;
+    position: relative;
+    top: -.05em;
+    height: 0.75em;
+    width: 0.75em;
+    border: 2px solid #000;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    -ms-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.soundcite-play:before {
+    font-size: 0.8em;
+    position: relative;
+    top: -.08em;
+    border: 0.5em solid transparent;
+    border-left: 0.75em solid black;
+}
+
+.soundcite-pause:before {
+    font-size: 0.8em;
+    position: relative;
+    top: -.08em;
+    height: 1em;
+    border-left: .75em double black;
+    border-right: .5em solid transparent;
+}
